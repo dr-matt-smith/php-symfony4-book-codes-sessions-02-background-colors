@@ -12,17 +12,33 @@ class DefaultController extends AbstractController
      */
     public function index()
     {
-        $colours = [
-            'foreground' => 'blue',
-            'background' => 'pink'
+        $colors = [
+            'foreground' => 'white',
+            'background' => 'black'
         ];
-        $default_colours = true;
 
         $template = 'default/index.html.twig';
         $args = [
-            'colours' => $colours,
-            'default_colours' => $default_colours
+            'colors' => $colors,
         ];
         return $this->render($template, $args);
     }
+
+    /**
+     * @Route("/pinkblue", name="pinkblue")
+     */
+    public function pinkblue()
+    {
+        $colors = [
+            'foreground' => 'blue',
+            'background' => 'pink'
+        ];
+
+        $template = 'default/index.html.twig';
+        $args = [
+            'colors' => $colors,
+        ];
+        return $this->render($template, $args);
+    }
+
 }

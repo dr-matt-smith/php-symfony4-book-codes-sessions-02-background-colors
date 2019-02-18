@@ -1,18 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello DefaulltController!{% endblock %}
+{% block title %}Hello Default Controller!{% endblock %}
 
 {% block body %}
-    using default colours =
-    {% if default_colours %}
-        yes
-    {% else %}
-        no
-    {% endif %}
     <ul>
-        {% for property, colour in colours %}
+        {% for property, color in colors %}
             <li>
-                {{ property }} = {{ colour }}
+                {{ property }} = {{ color }}
             </li>
         {% endfor %}
     </ul>
